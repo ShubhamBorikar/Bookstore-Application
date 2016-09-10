@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+    function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var password=document.getElementById("password").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length)
+     {
+        alert("Not a valid e-mail address");
+    }
+    else if(password.length==0)
+        alert("Please enter password");
+}
+	</script>
+	<title>Login</title>
+</head>
+<body>
+	<p class="c1 sitecolor"><b><a class="nolinkunderline" href="bookshelf.html">BookShelf.com</a></b></p>
+		<p class="c2"><a class="nolinkunderline" href="bookshelf.html">Home</a> <a class="nolinkunderline" href="books.html">Books</a> <a class="nolinkunderline" href="signup.html">SignUp</a> <a class="nolinkunderline" href="login.html">Login</a></p>
+		<hr>
+		<br>
+		<br>
+<p class="c5 center">Login</p>
+<form class="center" name="myForm">
+Email-id:<input type="text" name="email" id="email"><br><br>
+Password:<input type="text" name="password" id="password"><br><br><br>
+<input type="submit" name="login" onclick="validateForm()">
+</form>
+</body>
+</html>
